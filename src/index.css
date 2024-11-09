@@ -155,3 +155,26 @@ body {
         transform: translateX(-100%);
     }
 }
+
+/* ---------------------------- MEDIA ------------------------------------------ */
+
+@media (max-width:740px){
+  .scroll-img {
+    min-width: 20%; /* Each image takes 10% of the container width (10 images) */
+}
+}
+@media (max-width:632px){
+  .f-red {
+    width: 45%;
+}
+}
+@media (max-width:556px){
+  .f-red h4{
+    font-size: 1.2rem;
+  }
+}
+@media (max-width:475px){
+  .f-red h4{
+    font-size: 1rem;
+  }
+}
