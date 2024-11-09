@@ -12,10 +12,10 @@ const NavBar = () => {
 
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className=" py-2 ">
-            <Nav.Link className="nav-link" href="#home">About Us</Nav.Link>
+            <Nav.Link className="nav-link" href="#aboutus">About Us</Nav.Link>
             <Nav.Link className="nav-link" href="#link">How it Works</Nav.Link>
             <Nav.Link className="nav-link" href="#home">FAQ</Nav.Link>
-            <button className='btn btn-primary mt-2 '>Book Now</button>
+            <button className='btn mt-2 text-light' style={{backgroundColor:'#D90000'}}>Book Now</button>
           </Nav>
         </Navbar.Collapse>
       </Container>

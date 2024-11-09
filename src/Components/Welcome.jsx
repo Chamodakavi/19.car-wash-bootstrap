@@ -14,7 +14,7 @@ const Welcome = () => {
                     vehicle's luster and protect it from the elements. Book your
                     appointment today and let us pamper your car.
                     </p>
-                    <button className='btn btn-primary mt-2'>Book Now</button>
+                    <button className='btn mt-2 text-light' style={{backgroundColor:'#D90000'}}>Book Now</button>
                 </Col>
                 <Col xs={12} md={6}>
                     <img src={Img} alt="" srcset="" className='img-fluid ' />
