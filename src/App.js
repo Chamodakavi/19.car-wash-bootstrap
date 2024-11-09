@@ -4,6 +4,7 @@ import Welcome from './Components/Welcome'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Components/Footer';
 import AboutUs from './Components/AboutUs';
+import OurServices from './Components/OurServices';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <Navbar/>
         <Welcome/>
         <AboutUs/>
+        <OurServices/>
         <Footer/>
     </>
   )

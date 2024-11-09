@@ -22,7 +22,43 @@ body::before{
 .btn{
     margin-left: 10px;
 }
+/* ------------------------------ our services ----------------------- */
 
+.servce-section{
+  margin-top: 90px;
+}
+
+/* ----------------------------   SERVICE CARD      ---------------------- */
+.service-card {
+  border: none;
+}
+
+.service-card img {
+  height: 350px; /* Adjust based on preference */
+  object-fit: cover;
+}
+
+.service-title {
+  color: #D90000; /* Red color for title */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.hl{
+  height: 330px;
+  width: 3px;
+  background-color: black;
+  margin-top: 25px;
+}
+.outline{
+  border-left: 3px solid black;
+}
+.crd-body{
+ line-height: 3rem;
+ letter-spacing: 3px;
+ margin-left: 30px;
+}
 /* ------------------------------------------  FOOTER       ---------------------------------- */
 .cus {
     background-color: rgb(15, 15, 15);
