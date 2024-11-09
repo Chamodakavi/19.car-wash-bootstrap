@@ -51,7 +51,7 @@ const OurServices = () => {
 
         <Row className="g-5 mt-4">
           {Data.map((card, index) => (
-            <Col sm={12} md={4} key={card.id}>
+            <Col sm={12} md={6} lg={4} key={card.id}>
               <motion.div
                 variants={cardVariants}
                 initial="hidden"

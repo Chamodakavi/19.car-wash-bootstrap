@@ -1,12 +1,12 @@
-body::before{
+/* body::before{
     display: block;
     content: '';
     height: 30px;
-}
+} */
 .ng-car{
   background: url(imgs/bb.jpg) no-repeat center center;
   background-size: cover;
-  height: 92vh;
+  height: 100vh;
 }
 .welcome-intro{
     margin-top: 60px;

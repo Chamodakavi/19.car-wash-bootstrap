@@ -4,7 +4,7 @@ import Img from '../imgs/wash.png'
 import Bgimg from '../imgs/bb.jpg'
 const Welcome = () => {
   return (
-    <section className='ng-car pt-5 my-5 pb-5'>
+    <section className='ng-car pt-5 mb-5 pb-5'>
         <Container>
             <Row>
                 <Col xs={12} md={9} lg={6} className='welcome-intro'>
