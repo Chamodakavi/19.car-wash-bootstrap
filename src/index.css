@@ -1,0 +1,102 @@
+body::before{
+    display: block;
+    content: '';
+    height: 60px;
+}
+.welcome-intro{
+    margin-top: 60px;
+}
+.nav-link{
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.btn{
+    margin-left: 10px;
+}
+
+/* ------------------------------------------  FOOTER       ---------------------------------- */
+.cus {
+    background-color: rgb(15, 15, 15);
+    clip-path: polygon(0 1%, 100% 19%, 100% 100%, 0% 100%);
+}
+
+.f-detail-color{
+    color: #7d7979;
+}
+
+.footer-detail-container{
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  .vertical-line{
+    margin-top: 30px;
+    width: 3px;
+    height: auto;
+    background-color: #262626;
+  }
+  .footer-detail-1{
+    width: 50%;
+  }
+  .footer-detail-1 h4,p{
+    cursor: pointer;
+  }
+  .footer-detail-1 p :hover{
+    color: white;
+  }
+  .f-red h4{
+    color:aliceblue;
+    padding-top: 20px;
+
+  }
+  .f-sec{
+    margin-top: -100px;
+}
+  .f-red {
+    position: relative;
+    top: 170px;
+    width: 40%;
+    height: 100px;
+    z-index: 9999;
+    clip-path: polygon(0 0%, 100% 0%, 85% 100%, 0% 100%);
+    background-color: #D90000;
+    overflow: hidden;
+}
+ /* Container to hold the scrolling images */
+.scroll-container {
+    overflow: hidden; /* Hides overflow */
+    width: 100%; /* Full width of the viewport or parent container */
+    white-space: nowrap;
+    position: relative;
+    top: 70px;
+    z-index: 999;
+}
+
+/* Scrolling images wrapper */
+.scrolling-images {
+    display: flex;
+    animation: scroll-left 30s linear infinite; /* Scroll animation */
+}
+
+/* Styling for each image */
+.scroll-img {
+    min-width: 10%; /* Each image takes 10% of the container width (10 images) */
+    height: 100px; /* Set your desired height */
+    background-color: #eee; /* Placeholder background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #333;
+    margin-right: 5px; /* Optional margin between images */
+}
+
+/* Scroll animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
