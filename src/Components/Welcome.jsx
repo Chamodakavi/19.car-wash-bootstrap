@@ -7,7 +7,7 @@ const Welcome = () => {
         <Container>
             <Row>
                 <Col xs={12} md={6} className='welcome-intro'>
-                    <h1 className='text-warning fw-bold'>Shine Brighter, Drive Smoother.</h1>
+                    <h1 className='fw-bold' style={{color:'#D90000'}}>Shine Brighter, Drive Smoother.</h1>
                     <p className='lead'>
                     Experience the ultimate car care with <span className='fw-bold text-danger'>Auto Details</span>
                     . Our expert team and advanced technology will restore your

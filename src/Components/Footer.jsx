@@ -28,22 +28,22 @@ const Footer = () => {
         <div class="scroll-img"><img src={TM3} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM4} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM5} alt="" srcset="" className='img-fluid text-dark' /></div>
+        <div class="scroll-img"><img src={TM1} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM6} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM7} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM8} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM9} alt="" srcset="" className='img-fluid text-dark' /></div>   
-        <div class="scroll-img"><img src={TM1} alt="" srcset="" className='img-fluid text-dark' /></div>
       
         <div class="scroll-img"><img src={TM1} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM2} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM3} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM4} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM5} alt="" srcset="" className='img-fluid text-dark' /></div>
+        <div class="scroll-img"><img src={TM1} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM6} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM7} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM8} alt="" srcset="" className='img-fluid text-dark' /></div>
         <div class="scroll-img"><img src={TM9} alt="" srcset="" className='img-fluid text-dark' /></div>
-        <div class="scroll-img"><img src={TM1} alt="" srcset="" className='img-fluid text-dark' /></div>
 
         </div>
     </div>
