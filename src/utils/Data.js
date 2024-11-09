@@ -16,7 +16,7 @@ export const Data = [
         "img": "https://automiraj.lk/wp-content/uploads/2022/10/service-02.jpg",
         "title1": "Paints & Repairs",
         'p':"Insurance Claims",
-        "title2": "Nano Coating</span>",
+        "title2": "Nano Coating",
         "p1": "Spare Parts Replacement",
         "p2": "Mechanical Repair",
         "p3": "Full Paints",
