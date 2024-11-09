@@ -1,9 +1,10 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import Img from '../imgs/wash.png'
+import Bgimg from '../imgs/bb.jpg'
 const Welcome = () => {
   return (
-    <section className='pt-5 my-5 pb-5'>
+    <section className='ng-car pt-5 my-5 pb-5'>
         <Container>
             <Row>
                 <Col xs={12} md={6} className='welcome-intro'>
@@ -16,9 +17,9 @@ const Welcome = () => {
                     </p>
                     <button className='btn mt-2 text-light' style={{backgroundColor:'#D90000'}}>Book Now</button>
                 </Col>
-                <Col xs={12} md={6}>
-                    <img src={Img} alt="" srcset="" className='img-fluid ' />
-                </Col>
+                {/* <Col xs={12} md={6}>
+                    <img src={Bgimg} alt="" srcset="" className='img-fluid ' />
+                </Col> */}
             </Row>
         </Container>
     </section>

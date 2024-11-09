@@ -1,10 +1,18 @@
 body::before{
     display: block;
     content: '';
-    height: 60px;
+    height: 30px;
+}
+.ng-car{
+  background: url(imgs/bb.jpg) no-repeat center center;
+  background-size: cover;
+  height: 92vh;
 }
 .welcome-intro{
     margin-top: 60px;
+   background-color: rgba(162, 152, 152, 0.82);
+   padding: 30px;
+   border-radius: 10px;
 }
 .nav-link{
     margin-top: 10px;

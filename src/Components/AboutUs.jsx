@@ -11,7 +11,7 @@ const AboutUs = () => {
 
         <h1 className='my-5 fw-bold' style={{color:'#D90000'}}>About US</h1>
 
-            <Row>
+            <Row className='g-5'>
                 <Col xs={12} md={6}>
                     <h2>
                     Over <span style={{color:'#D90000'}}>28 Years</span> of Excellence in the automotive service industry
