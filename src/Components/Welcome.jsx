@@ -7,7 +7,7 @@ const Welcome = () => {
     <section className='ng-car pt-5 my-5 pb-5'>
         <Container>
             <Row>
-                <Col xs={12} md={6} className='welcome-intro'>
+                <Col xs={12} md={9} lg={6} className='welcome-intro'>
                     <h1 className='fw-bold' style={{color:'#D90000'}}>Shine Brighter, Drive Smoother.</h1>
                     <p className='lead'>
                     Experience the ultimate car care with <span className='fw-bold text-danger'>Auto Details</span>

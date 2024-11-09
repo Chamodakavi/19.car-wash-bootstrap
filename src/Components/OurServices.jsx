@@ -28,7 +28,7 @@ const OurServices = () => {
   };
 
   return (
-    <section className="servce-section" ref={ref}>
+    <section id='ourservices' className="servce-section" ref={ref}>
       <Container>
         <motion.h1 
           className="fw-bold" 
