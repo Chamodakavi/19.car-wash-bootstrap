@@ -231,10 +231,7 @@ const Reservations = () => {
                 </Col>
               </Row>
 
-              <Button variant="primary" type="submit" name="submit" 
-              id="submit" className="mt-3"  >
-                Submit
-              </Button>
+              <button className='btn mt-2 text-light' style={{backgroundColor:'#D90000'}}>Submit</button>
             </Form>
           </div>
         </div>

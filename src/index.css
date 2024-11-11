@@ -19,7 +19,8 @@
     margin-right: 5px;
     margin-left: 5px;
 }
-.btn{
+.btnb{
+  text-decoration: none;
     margin-left: 10px;
     background-color: #D90000;
 }

@@ -52,10 +52,13 @@ const NavBar = () => {
               Contact Us
             </Link>
             <Link
-              to="/booknow"
+            smooth
+              to="/booknow/#booking"
               className="btn mt-2 text-light"
               onClick={() => setExpanded(false)}
+              style={{backgroundColor:'#D90000'}}
             >
+              
               Book Now
             </Link>
           </Nav>
