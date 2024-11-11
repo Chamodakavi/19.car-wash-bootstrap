@@ -3,18 +3,18 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 
 const Reservations = () => {
   return (
-    <section className="reserve-sec">
+    <section className="reserve-sec" id="booking">
       <Container>
         <div>
           <h1 className="text-center text-secondary">
-            Make your Reservation Right Now !
+            Make your Reservation Now !
           </h1>
 
           <div className="booking-container">
             <Form className="mt-4 px-3">
               <Row>
                 <Col sm={12} md={6}>
-                  <h4>Name :</h4>
+                  <h4 className="my-4">Owner info :</h4>
                   <Form.Group className="mb-3">
                     <Form.Label>First Name :</Form.Label>
                     <Form.Control type="text" placeholder="Enter First Name" />
@@ -27,7 +27,7 @@ const Reservations = () => {
                 </Col>
 
                 <Col sm={12} md={6}>
-                  <h4>Contact info :</h4>
+                  <h4 className="my-4">Contact info :</h4>
                   <Form.Group className="mb-3">
                     <Form.Label>Email :</Form.Label>
                     <Form.Control type="email" placeholder="Enter Last Name" />
@@ -42,7 +42,7 @@ const Reservations = () => {
                   </Form.Group>
                 </Col>
 
-                <h4>Vehicle info :</h4>
+                <h4 className="my-4">Vehicle info :</h4>
                 <Col sm={12} md={6}>
                   <Form.Group className="mb-3">
                     <Form.Label>Vehicle Type :</Form.Label>
@@ -63,7 +63,7 @@ const Reservations = () => {
                   </Form.Group>
                 </Col>
 
-                <h4>Select services :</h4>
+                <h4 className="my-4">Select services :</h4>
                 <Col sm={12} md={6}>
                   <div class="services-container">
                     <Form.Group className="mb-3">
@@ -73,6 +73,9 @@ const Reservations = () => {
                           id="wash-and-grooming"
                           name="services"
                           value="wash-and-grooming"
+                          style={{
+                            marginRight:'10px'
+                          }}
                         />
                         <Form.Label>Wash and Grooming</Form.Label>
                       </div>
@@ -82,6 +85,9 @@ const Reservations = () => {
                           id="lube-services"
                           name="services"
                           value="lube-services"
+                          style={{
+                            marginRight:'10px'
+                          }}
                         />
                         <Form.Label>Lube Services</Form.Label>
                       </div>
@@ -91,6 +97,9 @@ const Reservations = () => {
                           id="exterior-interior-detailing"
                           name="services"
                           value="exterior-interior-detailing"
+                          style={{
+                            marginRight:'10px'
+                          }}
                         />
                         <Form.Label>Exterior & Interior Detailing</Form.Label>
                       </div>
@@ -100,6 +109,9 @@ const Reservations = () => {
                           id="engine-tune-ups"
                           name="services"
                           value="engine-tune-ups"
+                           style={{
+                            marginRight:'10px'
+                          }}
                         />
                         <Form.Label>Engine Tune ups</Form.Label>
                       </div>
@@ -109,6 +121,9 @@ const Reservations = () => {
                           id="wash-and-grooming-2"
                           name="services"
                           value="wash-and-grooming"
+                           style={{
+                            marginRight:'10px'
+                          }}
                         />
                         <Form.Label>Wash and Grooming</Form.Label>
                       </div>
@@ -124,6 +139,9 @@ const Reservations = () => {
                           id="wash-and-grooming"
                           name="services"
                           value="wash-and-grooming"
+                           style={{
+                            marginRight:'10px'
+                          }}
                         />
                         <Form.Label>Hybrid Services</Form.Label>
                       </div>
@@ -133,6 +151,9 @@ const Reservations = () => {
                           id="lube-services"
                           name="services"
                           value="lube-services"
+                           style={{
+                            marginRight:'10px'
+                          }}
                         />
                         <Form.Label>Wheel Alignment</Form.Label>
                       </div>
@@ -142,6 +163,9 @@ const Reservations = () => {
                           id="exterior-interior-detailing"
                           name="services"
                           value="exterior-interior-detailing"
+                           style={{
+                            marginRight:'10px'
+                          }}
                         />
                         <Form.Label>Battery Services</Form.Label>
                       </div>
@@ -151,6 +175,9 @@ const Reservations = () => {
                           id="engine-tune-ups"
                           name="services"
                           value="engine-tune-ups"
+                           style={{
+                            marginRight:'10px'
+                          }}
                         />
                         <Form.Label>Inspection Reports</Form.Label>
                       </div>
@@ -160,28 +187,52 @@ const Reservations = () => {
                           id="wash-and-grooming-2"
                           name="services"
                           value="wash-and-grooming"
+                           style={{
+                            marginRight:'10px'
+                          }}
                         />
                         <Form.Label>Part Replacements</Form.Label>
                       </div>
                     </Form.Group>
                   </div>
                 </Col>
-                <h4>Date & Time</h4>
-                <Col>
+
+
+                <h4 className="my-4">Date & Time</h4>
+
+                <Col md={6} sm={12}>
                   <div class="datetime-container">
                     <div class="datetime-item">
-                      <input type="date" id="date" name="date" />
+                    <Form.Control
+                      type="date"
+                      placeholder="Enter Vehicle Number ( BFO - **** )"
+                      style={{
+                        border:'1px solid #DEE2E6' , 
+                        borderRadius:'7px',
+                        cursor:'pointer',
+                        }}
+                    />
+                     
                       <label for="date">Date</label>
                     </div>
                     <div class="datetime-item">
-                      <input type="time" id="time" name="time" />
+                    <Form.Control
+                      type="time"
+                      placeholder="Enter Vehicle Number ( BFO - **** )"
+                      style={{
+                        border:'1px solid #DEE2E6' , 
+                        borderRadius:'7px',
+                        cursor:'pointer',
+                        }}
+                    />
                       <label for="time">Time</label>
                     </div>
                   </div>
                 </Col>
               </Row>
 
-              <Button variant="primary" type="submit" name="submit" id="submit">
+              <Button variant="primary" type="submit" name="submit" 
+              id="submit" className="mt-3"  >
                 Submit
               </Button>
             </Form>

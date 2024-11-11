@@ -54,7 +54,7 @@ const NavBar = () => {
             <Link
               to="/booknow"
               className="btn mt-2 text-light"
-              style={{ backgroundColor: "#D90000" }}
+              onClick={() => setExpanded(false)}
             >
               Book Now
             </Link>
