@@ -18,7 +18,9 @@ const ContactUs = () => {
   const [success,setSuccess] = useState(false)
 
   const handleChange = (e) =>{
-    setMessage((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+   setMessage(
+    (prev) => ({ ...prev,[e.target.name]:e.target.value})
+   )
   }
 
   const clearForm = ()=>{
@@ -97,10 +99,9 @@ const ContactUs = () => {
 
                 <Button type="submit">Submit</Button>
               </Form>
-
               {
                 success && (
-                  <Alert variant="success" onClose={() => setSuccess(false)} dismissible>
+                  <Alert className="alert" variant="success" onClose={() => setSuccess(false)} dismissible>
                   Message sent successfully!
                 </Alert>
                 )

@@ -53,3 +53,32 @@ app.post('/contactus',(req,res)=>{
             return res.json(data)
     })
 })
+
+//get booking details from booking table
+app.get('/booking',(req,res)=>{
+    const q = 'SELECT * FROM booking'
+    db.query(q,(err,data)=>{
+        if(err) return res.json(err)
+            return res.json(data)
+    })
+})
+
+//add booking details to booking table
+app.post('/booking',(req,res)=>{
+    const q = 'INSERT INTO booking(`fname`,`lname`,`email`,`mobileno`,`vtype`,`vnumber`,`services`,`date`,`time`) VALUES (?)'
+    const values = [
+        req.body.fname,
+        req.body.lname,
+        req.body.email,
+        req.body.mobileno,
+        req.body.vtype,
+        req.body.vnumber,
+        req.body.services,
+        req.body.date,
+        req.body.time
+    ]
+    db.query(q,[values],(err,data)=>{
+        if (err) return res.json(err)
+            return res.json(data)
+    })
+})

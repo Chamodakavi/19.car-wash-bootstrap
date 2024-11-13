@@ -1,7 +1,66 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 
 const Reservations = () => {
+
+  const [booking,setBooking] = useState({
+    fname:"",
+    lname:"",
+    email:"",
+    mobileno:"",
+    vtype:"",
+    vnumber:"",
+    services:"",
+    date:"",
+    time:""
+  })
+  const [error,setError] = useState(false)
+
+  const handleChange = (e) =>{
+    setBooking(
+      (prev) => ({ ...prev,[e.target.name]:e.target.value})
+    )
+  }
+
+  const clearForm = ()=>{
+   setBooking(
+    {fname:"",
+    lname:"",
+    email:"",
+    mobileno:"",
+    vtype:"",
+    vnumber:"",
+    services:"",
+    date:"",
+    time:""
+  }
+   )
+  }
+  const handleServiceChange = (e) => {
+    const { value, checked } = e.target;
+
+    setBooking((prev) => {
+      const services = checked
+        ? [...prev.services, value]
+        : prev.services.filter((service) => service !== value);
+      return { ...prev, services };
+    });
+  };
+
+  const handleClick = async (e) =>{
+    e.preventDefault()
+    try {
+      await axios.post("http://localhost:8800/booking",{...booking,services:JSON.stringify(booking.services)})
+      setError(false)
+      clearForm()
+    } catch (error) {
+      console.log("add booking error :"+error)
+      setError(true)
+      clearForm()
+    }
+  }
+
   return (
     <section className="reserve-sec" id="booking">
       <Container>
@@ -11,18 +70,18 @@ const Reservations = () => {
           </h1>
 
           <div className="booking-container">
-            <Form className="mt-4 px-3">
+            <Form className="mt-4 px-3" onSubmit={handleClick}>
               <Row>
                 <Col sm={12} md={6}>
                   <h4 className="my-4">Owner info :</h4>
                   <Form.Group className="mb-3">
                     <Form.Label>First Name :</Form.Label>
-                    <Form.Control type="text" placeholder="Enter First Name" />
+                    <Form.Control type="text" value={booking.fname} placeholder="Enter First Name" name="fname" onChange={handleChange} required/>
                   </Form.Group>
 
                   <Form.Group className="mb-3">
                     <Form.Label>Last Name :</Form.Label>
-                    <Form.Control type="email" placeholder="Enter Last Name" />
+                    <Form.Control type="text" value={booking.lname} placeholder="Enter Last Name" name="lname" onChange={handleChange} required/>
                   </Form.Group>
                 </Col>
 
@@ -30,7 +89,7 @@ const Reservations = () => {
                   <h4 className="my-4">Contact info :</h4>
                   <Form.Group className="mb-3">
                     <Form.Label>Email :</Form.Label>
-                    <Form.Control type="email" placeholder="Enter Last Name" />
+                    <Form.Control type="email" placeholder="Enter Email" value={booking.email} name="email" onChange={handleChange} required/>
                     <Form.Text className="text-muted">
                       We'll never share your email with anyone else.
                     </Form.Text>
@@ -38,7 +97,7 @@ const Reservations = () => {
 
                   <Form.Group className="mb-3">
                     <Form.Label>Mobile No :</Form.Label>
-                    <Form.Control type="int" placeholder="070 453 1243" />
+                    <Form.Control type="int" placeholder="070 453 1243" value={booking.mobileno} name="mobileno" onChange={handleChange} required/>
                   </Form.Group>
                 </Col>
 
@@ -49,6 +108,9 @@ const Reservations = () => {
                     <Form.Control
                       type="text"
                       placeholder="Enter Vehicle type (car , lorry , van)"
+                      onChange={handleChange} required
+                      value={booking.vtype}
+                      name="vtype"
                     />
                   </Form.Group>
                 </Col>
@@ -59,11 +121,44 @@ const Reservations = () => {
                     <Form.Control
                       type="text"
                       placeholder="Enter Vehicle Number ( BFO - **** )"
+                      onChange={handleChange} required
+                      name="vnumber"
+                      value={booking.vnumber}
                     />
                   </Form.Group>
                 </Col>
 
                 <h4 className="my-4">Select services :</h4>
+                <Col sm={12} md={6}>
+                  <Form.Group className="mb-3">
+                    {[
+                      { label: "Wash and Grooming", value: "wash-and-grooming" },
+                      { label: "Lube Services", value: "lube-services" },
+                      { label: "Exterior & Interior Detailing", value: "exterior-interior-detailing" },
+                      { label: "Engine Tune-ups", value: "engine-tune-ups" },
+                      { label: "Hybrid Services", value: "hybrid-services" },
+                      { label: "Wheel Alignment", value: "wheel-alignment" },
+                      { label: "Battery Services", value: "battery-services" },
+                      { label: "Inspection Reports", value: "inspection-reports" },
+                      { label: "Part Replacements", value: "part-replacements" }
+                    ].map((service) => (
+                      <div className="service-item" key={service.value}>
+                        <input
+                          type="checkbox"
+                          id={service.value}
+                          name="services"
+                          value={service.value}
+                          checked={booking.services.includes(service.value)}
+                          onChange={handleServiceChange}
+                          style={{ marginRight: "10px" }}
+                        />
+                        <Form.Label htmlFor={service.value}>{service.label}</Form.Label>
+                      </div>
+                    ))}
+                  </Form.Group>
+                </Col>
+
+                {/* <h4 className="my-4">Select services :</h4>
                 <Col sm={12} md={6}>
                   <div class="services-container">
                     <Form.Group className="mb-3">
@@ -76,6 +171,7 @@ const Reservations = () => {
                           style={{
                             marginRight:'10px'
                           }}
+                         
                         />
                         <Form.Label>Wash and Grooming</Form.Label>
                       </div>
@@ -88,6 +184,7 @@ const Reservations = () => {
                           style={{
                             marginRight:'10px'
                           }}
+                         
                         />
                         <Form.Label>Lube Services</Form.Label>
                       </div>
@@ -100,6 +197,7 @@ const Reservations = () => {
                           style={{
                             marginRight:'10px'
                           }}
+                          
                         />
                         <Form.Label>Exterior & Interior Detailing</Form.Label>
                       </div>
@@ -112,6 +210,7 @@ const Reservations = () => {
                            style={{
                             marginRight:'10px'
                           }}
+                       
                         />
                         <Form.Label>Engine Tune ups</Form.Label>
                       </div>
@@ -124,6 +223,7 @@ const Reservations = () => {
                            style={{
                             marginRight:'10px'
                           }}
+                       
                         />
                         <Form.Label>Wash and Grooming</Form.Label>
                       </div>
@@ -195,7 +295,7 @@ const Reservations = () => {
                       </div>
                     </Form.Group>
                   </div>
-                </Col>
+                </Col> */}
 
 
                 <h4 className="my-4">Date & Time</h4>
@@ -231,7 +331,12 @@ const Reservations = () => {
                 </Col>
               </Row>
 
-              <button className='btn mt-2 text-light' style={{backgroundColor:'#D90000'}}>Submit</button>
+              <button 
+              className='btn mt-2 text-light' 
+              style={{backgroundColor:'#D90000'}}
+              type="submit"
+              >
+                Submit</button>
             </Form>
           </div>
         </div>
